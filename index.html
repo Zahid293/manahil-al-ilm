@@ -1,0 +1,222 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manahil al-Ilm | Learning Without Limits</title>
+  <meta name="description" content="Manahil al-Ilm — a platform for learning, knowledge and personal growth.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #183b36;
+      background: #fafbf8;
+      line-height: 1.6;
+    }
+
+    header {
+      background: white;
+      padding: 18px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    }
+
+    .logo {
+      font-size: 23px;
+      font-weight: bold;
+      color: #174c43;
+    }
+
+    .logo span {
+      display: block;
+      font-size: 13px;
+      font-weight: normal;
+      color: #b18a48;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #183b36;
+      margin-left: 22px;
+      font-size: 14px;
+    }
+
+    .hero {
+      padding: 90px 8%;
+      text-align: center;
+      background: linear-gradient(135deg, #eaf2ed, #f8f3e8);
+    }
+
+    .arabic {
+      font-size: 35px;
+      color: #b18a48;
+      margin-bottom: 12px;
+    }
+
+    .hero h1 {
+      font-size: 44px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      max-width: 620px;
+      margin: 0 auto 28px;
+      color: #52645e;
+      font-size: 17px;
+    }
+
+    .button {
+      display: inline-block;
+      background: #174c43;
+      color: white;
+      padding: 13px 28px;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+
+    .section {
+      padding: 65px 8%;
+      text-align: center;
+    }
+
+    .section h2 {
+      font-size: 30px;
+      margin-bottom: 12px;
+    }
+
+    .section-intro {
+      color: #68766f;
+      margin-bottom: 35px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px 22px;
+      border-radius: 10px;
+      border: 1px solid #e8ece7;
+      text-align: left;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: #174c43;
+    }
+
+    .card p {
+      color: #68766f;
+      font-size: 14px;
+    }
+
+    footer {
+      background: #173e37;
+      color: white;
+      text-align: center;
+      padding: 28px 15px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 700px) {
+      header {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      nav a {
+        margin: 0 7px;
+        font-size: 13px;
+      }
+
+      .hero {
+        padding: 65px 6%;
+      }
+
+      .hero h1 {
+        font-size: 34px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">
+      MANAHIL AL-ILM
+      <span>مناهل العلم</span>
+    </div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#courses">Courses</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="arabic">مناهل العلم</div>
+    <h1>Welcome to Manahil al-Ilm</h1>
+    <p>
+      Discover knowledge, develop your abilities and
+      explore new opportunities through meaningful learning.
+    </p>
+    <a href="#courses" class="button">Explore Learning</a>
+  </section>
+
+  <section class="section" id="about">
+    <h2>Learning Begins Here</h2>
+    <p class="section-intro">
+      A learning platform designed to make education accessible and engaging.
+    </p>
+  </section>
+
+  <section class="section" id="courses">
+    <h2>Explore Our Learning Areas</h2>
+    <p class="section-intro">
+      Discover learning opportunities across different fields.
+    </p>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Islamic Studies</h3>
+        <p>Explore Islamic knowledge, scholarship and intellectual traditions.</p>
+      </div>
+
+      <div class="card">
+        <h3>General Education</h3>
+        <p>Build knowledge and skills across a range of academic subjects.</p>
+      </div>
+
+      <div class="card">
+        <h3>Test Preparation</h3>
+        <p>Prepare for examinations through structured learning and practice.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <p>Manahil al-Ilm — Knowledge for Every Generation</p>
+    <p>© 2026 Manahil al-Ilm. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
