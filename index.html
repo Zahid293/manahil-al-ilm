@@ -2,221 +2,506 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Manahil al-Ilm | Learning Without Limits</title>
-  <meta name="description" content="Manahil al-Ilm — a platform for learning, knowledge and personal growth.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manahil al-Ilm | Islamic Studies Academy</title>
+<meta name="description" content="Manahil al-Ilm is an Islamic Studies learning platform dedicated to Quran, Hadith, Fiqh, Seerah and Islamic scholarship.">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    body {
-      font-family: Arial, sans-serif;
-      color: #183b36;
-      background: #fafbf8;
-      line-height: 1.6;
-    }
+<style>
+:root {
+  --green: #123e32;
+  --dark: #0b2c25;
+  --gold: #bd9855;
+  --cream: #f8f6ef;
+  --white: #ffffff;
+  --muted: #69776f;
+}
 
-    header {
-      background: white;
-      padding: 18px 7%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
-    }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    .logo {
-      font-size: 23px;
-      font-weight: bold;
-      color: #174c43;
-    }
+html {
+  scroll-behavior: smooth;
+}
 
-    .logo span {
-      display: block;
-      font-size: 13px;
-      font-weight: normal;
-      color: #b18a48;
-    }
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: #243a31;
+  line-height: 1.7;
+}
 
-    nav a {
-      text-decoration: none;
-      color: #183b36;
-      margin-left: 22px;
-      font-size: 14px;
-    }
+header {
+  background: white;
+  padding: 15px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 15px rgba(0,0,0,.06);
+}
 
-    .hero {
-      padding: 90px 8%;
-      text-align: center;
-      background: linear-gradient(135deg, #eaf2ed, #f8f3e8);
-    }
+.brand {
+  color: var(--green);
+  font-size: 21px;
+  font-weight: 800;
+  letter-spacing: .5px;
+  line-height: 1.3;
+}
 
-    .arabic {
-      font-size: 35px;
-      color: #b18a48;
-      margin-bottom: 12px;
-    }
+.brand span {
+  display: block;
+  font-family: 'Amiri', serif;
+  font-size: 19px;
+  color: var(--gold);
+  font-weight: 400;
+}
 
-    .hero h1 {
-      font-size: 44px;
-      margin-bottom: 15px;
-    }
+nav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
 
-    .hero p {
-      max-width: 620px;
-      margin: 0 auto 28px;
-      color: #52645e;
-      font-size: 17px;
-    }
+nav a {
+  text-decoration: none;
+  color: #34483e;
+  font-size: 14px;
+  font-weight: 600;
+}
 
-    .button {
-      display: inline-block;
-      background: #174c43;
-      color: white;
-      padding: 13px 28px;
-      border-radius: 6px;
-      text-decoration: none;
-    }
+nav a:hover {
+  color: var(--gold);
+}
 
-    .section {
-      padding: 65px 8%;
-      text-align: center;
-    }
+.hero {
+  background:
+    radial-gradient(circle at 85% 20%, rgba(189,152,85,.15), transparent 30%),
+    linear-gradient(125deg, #0b2c25, #174c3d);
+  color: white;
+  padding: 105px 8%;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
 
-    .section h2 {
-      font-size: 30px;
-      margin-bottom: 12px;
-    }
+.hero:before {
+  content: "۞";
+  position: absolute;
+  font-size: 300px;
+  color: rgba(255,255,255,.035);
+  right: 4%;
+  top: -80px;
+}
 
-    .section-intro {
-      color: #68766f;
-      margin-bottom: 35px;
-    }
+.hero-content {
+  max-width: 850px;
+  margin: auto;
+  position: relative;
+}
 
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-    }
+.hero .arabic {
+  font-family: 'Amiri', serif;
+  font-size: 55px;
+  color: #e2c58d;
+  margin-bottom: 12px;
+}
 
-    .card {
-      background: white;
-      padding: 30px 22px;
-      border-radius: 10px;
-      border: 1px solid #e8ece7;
-      text-align: left;
-    }
+.hero h1 {
+  font-size: clamp(32px, 5vw, 54px);
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
 
-    .card h3 {
-      margin-bottom: 10px;
-      color: #174c43;
-    }
+.hero p {
+  max-width: 680px;
+  margin: auto;
+  color: #e0e9e3;
+  font-size: 17px;
+}
 
-    .card p {
-      color: #68766f;
-      font-size: 14px;
-    }
+.hero-buttons {
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
 
-    footer {
-      background: #173e37;
-      color: white;
-      text-align: center;
-      padding: 28px 15px;
-      font-size: 14px;
-    }
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 700;
+}
 
-    @media (max-width: 700px) {
-      header {
-        flex-direction: column;
-        gap: 15px;
-      }
+.btn-gold {
+  background: var(--gold);
+  color: #152e25;
+}
 
-      nav a {
-        margin: 0 7px;
-        font-size: 13px;
-      }
+.btn-outline {
+  border: 1px solid rgba(255,255,255,.6);
+  color: white;
+}
 
-      .hero {
-        padding: 65px 6%;
-      }
+.section {
+  padding: 75px 8%;
+  text-align: center;
+}
 
-      .hero h1 {
-        font-size: 34px;
-      }
+.eyebrow {
+  color: #a17d42;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
 
-      .cards {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+.section h2 {
+  font-size: 32px;
+  color: var(--green);
+  margin: 8px 0 12px;
+}
+
+.intro {
+  max-width: 680px;
+  margin: 0 auto 38px;
+  color: var(--muted);
+}
+
+.about {
+  background: white;
+}
+
+.about-content {
+  max-width: 850px;
+  margin: auto;
+}
+
+.about-content p {
+  color: #617067;
+  margin-top: 15px;
+}
+
+.subject-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  text-align: left;
+}
+
+.subject {
+  background: white;
+  padding: 28px 25px;
+  border: 1px solid #e9e5d9;
+  border-radius: 9px;
+  transition: .2s;
+}
+
+.subject:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0,0,0,.07);
+}
+
+.subject .symbol {
+  font-family: 'Amiri', serif;
+  font-size: 32px;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+
+.subject h3 {
+  color: var(--green);
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.subject p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.approach {
+  background: #edf1eb;
+}
+
+.approach-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 35px;
+}
+
+.approach-item {
+  padding: 22px;
+}
+
+.approach-item h3 {
+  color: var(--green);
+  margin-bottom: 8px;
+}
+
+.approach-item p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.cta {
+  background: var(--green);
+  color: white;
+  padding: 65px 8%;
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: 30px;
+  margin-bottom: 12px;
+}
+
+.cta p {
+  color: #d9e5dd;
+  margin-bottom: 25px;
+}
+
+footer {
+  background: var(--dark);
+  color: #e4e9e4;
+  padding: 40px 8% 20px;
+  text-align: center;
+}
+
+footer .footer-brand {
+  font-size: 22px;
+  font-weight: 800;
+  color: white;
+}
+
+footer .arabic {
+  font-family: 'Amiri', serif;
+  color: var(--gold);
+  font-size: 25px;
+}
+
+footer p {
+  font-size: 13px;
+  color: #c2d0c7;
+  margin-top: 10px;
+}
+
+.copyright {
+  border-top: 1px solid rgba(255,255,255,.15);
+  margin-top: 25px;
+  padding-top: 18px;
+}
+
+@media(max-width: 800px) {
+  header {
+    flex-direction: column;
+    gap: 12px;
+    padding: 14px 5%;
+  }
+
+  nav {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav a {
+    font-size: 12px;
+  }
+
+  .hero {
+    padding: 75px 6%;
+  }
+
+  .hero .arabic {
+    font-size: 43px;
+  }
+
+  .section {
+    padding: 55px 6%;
+  }
+
+  .subject-grid,
+  .approach-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <header>
-    <div class="logo">
-      MANAHIL AL-ILM
-      <span>مناهل العلم</span>
-    </div>
+<header>
+  <div class="brand">
+    MANAHIL AL-ILM
+    <span>مناهل العلم</span>
+  </div>
 
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#courses">Courses</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#disciplines">Disciplines</a>
+    <a href="#approach">Our Approach</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-  <section class="hero" id="home">
+<section class="hero" id="home">
+  <div class="hero-content">
     <div class="arabic">مناهل العلم</div>
-    <h1>Welcome to Manahil al-Ilm</h1>
+    <h1>A Gateway to Islamic Knowledge</h1>
     <p>
-      Discover knowledge, develop your abilities and
-      explore new opportunities through meaningful learning.
-    </p>
-    <a href="#courses" class="button">Explore Learning</a>
-  </section>
-
-  <section class="section" id="about">
-    <h2>Learning Begins Here</h2>
-    <p class="section-intro">
-      A learning platform designed to make education accessible and engaging.
-    </p>
-  </section>
-
-  <section class="section" id="courses">
-    <h2>Explore Our Learning Areas</h2>
-    <p class="section-intro">
-      Discover learning opportunities across different fields.
+      Explore the rich intellectual heritage of Islam through
+      structured learning in the Qur'an, Hadith, Fiqh, Seerah
+      and other disciplines of Islamic Studies.
     </p>
 
-    <div class="cards">
-      <div class="card">
-        <h3>Islamic Studies</h3>
-        <p>Explore Islamic knowledge, scholarship and intellectual traditions.</p>
-      </div>
-
-      <div class="card">
-        <h3>General Education</h3>
-        <p>Build knowledge and skills across a range of academic subjects.</p>
-      </div>
-
-      <div class="card">
-        <h3>Test Preparation</h3>
-        <p>Prepare for examinations through structured learning and practice.</p>
-      </div>
+    <div class="hero-buttons">
+      <a href="#disciplines" class="btn btn-gold">Explore Disciplines</a>
+      <a href="#about" class="btn btn-outline">Discover Our Vision</a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <footer id="contact">
-    <p>Manahil al-Ilm — Knowledge for Every Generation</p>
+<section class="section about" id="about">
+  <div class="about-content">
+    <div class="eyebrow">About Manahil al-Ilm</div>
+    <h2>Knowledge Rooted in Scholarship</h2>
+    <p>
+      Manahil al-Ilm is an educational platform dedicated
+      exclusively to Islamic Studies. It aims to provide
+      organised learning opportunities across the classical
+      and contemporary disciplines of Islamic knowledge.
+    </p>
+    <p>
+      Our vision is to make the study of Islam accessible
+      through structured courses, educational resources,
+      assessments and meaningful academic engagement.
+    </p>
+  </div>
+</section>
+
+<section class="section" id="disciplines">
+  <div class="eyebrow">Areas of Study</div>
+  <h2>Explore Islamic Disciplines</h2>
+  <p class="intro">
+    Discover the major fields of Islamic scholarship
+    through dedicated learning programmes.
+  </p>
+
+  <div class="subject-grid">
+
+    <div class="subject">
+      <div class="symbol">القرآن الكريم</div>
+      <h3>Qur'anic Studies</h3>
+      <p>Qur'anic sciences, Tafsir, translation and understanding of the Qur'an.</p>
+    </div>
+
+    <div class="subject">
+      <div class="symbol">الحديث</div>
+      <h3>Hadith Studies</h3>
+      <p>Hadith literature, sciences of Hadith and the Prophetic traditions.</p>
+    </div>
+
+    <div class="subject">
+      <div class="symbol">الفقه</div>
+      <h3>Fiqh and Usul al-Fiqh</h3>
+      <p>Islamic jurisprudence, legal principles and the development of Islamic law.</p>
+    </div>
+
+    <div class="subject">
+      <div class="symbol">السيرة النبوية</div>
+      <h3>Seerah Studies</h3>
+      <p>The life, mission and teachings of Prophet Muhammad ﷺ.</p>
+    </div>
+
+    <div class="subject">
+      <div class="symbol">التاريخ الإسلامي</div>
+      <h3>Islamic History</h3>
+      <p>Islamic civilisation, intellectual traditions and historical developments.</p>
+    </div>
+
+    <div class="subject">
+      <div class="symbol">العقيدة</div>
+      <h3>Aqeedah and Islamic Thought</h3>
+      <p>Islamic beliefs, theology and major intellectual discussions.</p>
+    </div>
+
+    <div class="subject">
+      <div class="symbol">اللغة العربية</div>
+      <h3>Arabic Language</h3>
+      <p>Arabic grammar, vocabulary and language skills for Islamic learning.</p>
+    </div>
+
+    <div class="subject">
+      <div class="symbol">الدراسات الإسلامية</div>
+      <h3>Contemporary Islamic Studies</h3>
+      <p>Modern issues, institutions and contemporary academic discussions.</p>
+    </div>
+
+    <div class="subject">
+      <div class="symbol">البحث العلمي</div>
+      <h3>Islamic Research</h3>
+      <p>Research methods, academic writing and critical study of Islamic sources.</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="section approach" id="approach">
+  <div class="eyebrow">Our Learning Approach</div>
+  <h2>A Structured Learning Experience</h2>
+  <p class="intro">
+    A planned learning environment for students
+    interested in Islamic knowledge and scholarship.
+  </p>
+
+  <div class="approach-grid">
+    <div class="approach-item">
+      <h3>Structured Courses</h3>
+      <p>Organised programmes with clearly defined subjects and learning objectives.</p>
+    </div>
+
+    <div class="approach-item">
+      <h3>Learning Resources</h3>
+      <p>Educational materials, readings and study resources for enrolled learners.</p>
+    </div>
+
+    <div class="approach-item">
+      <h3>Assessment and Progress</h3>
+      <p>Opportunities to assess learning and monitor academic progress.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="contact">
+  <h2>Begin Your Journey of Knowledge</h2>
+  <p>
+    Explore the disciplines of Islamic Studies with Manahil al-Ilm.
+  </p>
+  <a href="#disciplines" class="btn btn-gold">Explore Our Subjects</a>
+</section>
+
+<footer>
+  <div class="footer-brand">MANAHIL AL-ILM</div>
+  <div class="arabic">مناهل العلم</div>
+  <p>A Gateway to Islamic Knowledge</p>
+  <div class="copyright">
     <p>© 2026 Manahil al-Ilm. All rights reserved.</p>
-  </footer>
+  </div>
+</footer>
 
 </body>
 </html>
